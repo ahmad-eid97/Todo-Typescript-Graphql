@@ -1,0 +1,33 @@
+{
+  "name": "todo-with-graphql-and-testing",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.11",
+    "@types/apollo-upload-client": "^17.0.2",
+    "apollo-upload-client": "^17.0.0",
+    "axios": "^1.3.5",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-router-dom": "^6.10.0",
+    "sass": "^1.60.0",
+    "sweetalert2": "^11.7.3",
+    "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}

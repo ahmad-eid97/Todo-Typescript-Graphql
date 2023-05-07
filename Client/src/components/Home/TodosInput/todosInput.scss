@@ -1,0 +1,19 @@
+@import '../../../styles/extends.scss';
+@import '../../../styles/mixins.scss';
+
+.todos-input {
+  flex: 1;
+
+  input {
+    width: 90%;
+    @extend %input;
+
+    @include xs {
+      width: 90%;
+    }
+  }
+
+  @include xs {
+    width: 100%;
+  }
+}

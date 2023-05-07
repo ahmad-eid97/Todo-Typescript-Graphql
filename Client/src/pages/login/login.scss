@@ -1,0 +1,9 @@
+@import '../../styles/extends.scss';
+@import '../../styles/mixins.scss';
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}

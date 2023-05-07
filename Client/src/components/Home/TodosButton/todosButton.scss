@@ -1,0 +1,39 @@
+@import '../../../styles/extends.scss';
+
+.todos-button {
+  button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    i {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      @extend %shadow;
+      display: grid;
+      place-content: center;
+      font-size: 1.5rem;
+      background-color: var(--main-background);
+      position: relative;
+      z-index: 2;
+    }
+
+    span {
+      @extend %shadow;
+      padding: 20px 20px 20px 30px;
+      font-size: 1.1rem;
+      border-radius: 0 20px 20px 0;
+      transform: translateX(-20px);
+    }
+
+    &:hover {
+      i {
+        background-color: var(--main-color);
+        color: #fff;
+      }
+    }
+  }
+}
