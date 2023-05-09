@@ -34,7 +34,7 @@ export function useLogic() {
       return
     }
 
-    signup('/auth/signup', signupData)
+    await signup('/auth/signup', signupData)
     navigate('/')
   }
 

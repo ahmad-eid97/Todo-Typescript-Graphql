@@ -15,11 +15,12 @@ import { Todo } from "../../../types/todo/todo";
 // FUNCTION PROPS TYPE
 interface LogicProps {
   updateMode: Todo | null
+  setUpdateMode: React.Dispatch<React.SetStateAction<Todo | null>>
   todoContent: string
   setTodoContent: React.Dispatch<React.SetStateAction<string>>
 }
 
-export function useLogic({ updateMode, todoContent, setTodoContent }: LogicProps) {
+export function useLogic({ updateMode, setUpdateMode, todoContent, setTodoContent }: LogicProps) {
   const userData = useLoaderData() as User;
   const [addNewTodo] = useMutation(AddTodo, {
     refetchQueries: [GET_TODOS]
@@ -61,6 +62,7 @@ export function useLogic({ updateMode, todoContent, setTodoContent }: LogicProps
       }
     })
     setTodoContent('')
+    setUpdateMode(null)
     successToast('Todo item updated successfully')
   }
 

@@ -1,16 +1,16 @@
+// REACT STUFF
+import { useContext } from 'react';
+// REACT CONTEXTS
+import { TodoContext } from '../../../contexts/TodoContext';
 // LOGIC
 import { useLogic } from './useLogic';
 // TYPES
 import { Todo } from '../../../types/todo/todo';
 // STYLES
 import './todosList.scss';
-// COMPONENT PROPS TYPE
-type TodoListProps = {
-  setTodoContent: React.Dispatch<React.SetStateAction<string>>,
-  setUpdateMode: React.Dispatch<React.SetStateAction<Todo | null>>
-}
 
-const TodosList = ({ setTodoContent, setUpdateMode }: TodoListProps) => {
+const TodosList = () => {
+  const { setTodoContent, setUpdateMode } = useContext(TodoContext)
   const { todos, switchToUpdateMode, updateTodoStatus, removeTodo, showMore } = useLogic({ setTodoContent, setUpdateMode });
 
   return (

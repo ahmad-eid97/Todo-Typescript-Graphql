@@ -1,25 +1,24 @@
-// REACT STUFF
-import React from 'react';
+// REACT CONTEXTS
+import TodoProvider from '../../contexts/TodoContext';
 // COMPONENTS
 import { Header, TodosField, TodosList } from '../../components';
-// LOGIC
-import { useLogic } from './useLogic';
 // STYLES
 import './home.scss';
 
-const home = () => {
-  const { todoContent, setTodoContent, updateMode, setUpdateMode } = useLogic()
+const Home = () => {
 
   return (
     <div className='home'>
       <div className='wrapper'>
-        <Header />
-        <h1>Tasks List</h1>
-        <TodosField todoContent={todoContent} setTodoContent={setTodoContent} updateMode={updateMode} />
-        <TodosList setTodoContent={setTodoContent} setUpdateMode={setUpdateMode} />
+        <TodoProvider>
+          <Header />
+          <h1>Tasks List</h1>
+          <TodosField />
+          <TodosList />
+        </TodoProvider>
       </div>
     </div>
   )
 }
 
-export default home
+export default Home;
